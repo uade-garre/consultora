@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Servicios | Trackline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 <body>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
-            <nav class="site-nav" aria-label="Principal">
-                <a href="index.html">INICIO</a>
-                <a href="servicios.html" class="active" aria-current="page">SERVICIOS</a>
-                <a href="alianzas.html">ALIANZAS</a>
-                <a href="casos_de_exito.html">CASOS DE EXITO</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+            <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html" class="active" aria-current="page">Servicios</a>
+                <a href="alianzas.html">Alianzas</a>
+                <a href="casos_de_exito.html">Casos de exito</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="sobre_nosotros.html">Sobre nosotros</a>
             </nav>
         </div>
     </header>
@@ -24,63 +34,53 @@
     <main class="page-shell">
         <div class="container">
             <section class="page-hero">
-                <div>
-                    <h1>Servicios</h1>
-                    <p>
-                        Transformamos ideas complejas en interfaces intuitivas. Ofrecemos desde Consultoría UX/UI y Desarrollo Web High-End hasta la Optimización de Procesos Digitales. Nos especializamos en crear ecosistemas digitales donde el diseño y los datos convergen para maximizar la conversión y la usabilidad.
-                    </p>
-                    <p>
-                        Nuestros servicios están diseñados para empresas que buscan no solo una presencia digital, sino una herramienta de crecimiento eficiente.
-                    </p>
-                </div>
+                <span class="eyebrow">Servicios</span>
+                <h1>Soluciones digitales para mejorar ventas, operacion y experiencia.</h1>
+                <p>
+                    Transformamos ideas complejas en interfaces intuitivas. Nos especializamos en crear
+                    ecosistemas donde el diseno, los datos y la tecnologia trabajan juntos.
+                </p>
             </section>
 
             <section class="section-block">
                 <div class="service-grid">
                     <article class="service-card">
-                        <h3>1. Consultoría UX/UI y Auditoría de Producto</h3>
-                        <p>
-                            Antes de diseñar, analizamos. Evaluamos la fricción en la navegación, la jerarquía visual y la psicología del usuario para optimizar la retención.
-                        </p>
+                        <h3>Consultoria UX/UI</h3>
+                        <p>Antes de disenar, analizamos. Evaluamos fricciones, jerarquia visual y objetivos de negocio.</p>
                         <ul>
-                            <li>Auditoría de UX: Identificación de cuellos de botella en sitios actuales.</li>
-                            <li>Prototipado de alta fidelidad: Validación de flujos antes del desarrollo.</li>
-                            <li>User Testing: Pruebas reales para asegurar que el diseño cumple su objetivo.</li>
+                            <li>Auditoria de UX y navegacion.</li>
+                            <li>Prototipado de alta fidelidad.</li>
+                            <li>Pruebas de usuario y mejoras iterativas.</li>
                         </ul>
                     </article>
 
                     <article class="service-card">
-                        <h3>2. Desarrollo Web de Alto Rendimiento</h3>
-                        <p>
-                            Construimos sitios rápidos, seguros y escalables. Nos enfocamos en tecnologías modernas que permiten una gestión de contenido ágil sin sacrificar la estética.
-                        </p>
+                        <h3>Desarrollo web</h3>
+                        <p>Construimos sitios rapidos, seguros y escalables con foco en conversion.</p>
                         <ul>
-                            <li>Sitios Corporativos y Landings de Conversión: Foco total en el ROI.</li>
-                            <li>Webflow &amp; Framer Development: Desarrollo rápido y visualmente impactante.</li>
-                            <li>E-commerce &amp; Web Apps: Soluciones robustas para ventas o gestión de datos.</li>
+                            <li>Sitios corporativos y landings.</li>
+                            <li>Experiencias responsive.</li>
+                            <li>E-commerce y web apps.</li>
                         </ul>
                     </article>
 
                     <article class="service-card">
-                        <h3>3. Sistemas de Diseño y Escalabilidad</h3>
-                        <p>
-                            Creamos lenguajes visuales coherentes para que tu marca crezca sin desordenarse.
-                        </p>
+                        <h3>Sistemas de diseno</h3>
+                        <p>Creamos lenguajes visuales consistentes para que tu marca crezca sin desordenarse.</p>
                         <ul>
-                            <li>Bibliotecas de Componentes: Elementos reutilizables (botones, formularios, tipografías) que ahorran tiempo y costos futuros.</li>
-                            <li>Manual de Estilo Digital: Consistencia total en cada punto de contacto con el cliente.</li>
+                            <li>Bibliotecas de componentes.</li>
+                            <li>Manual de estilo digital.</li>
+                            <li>Escalabilidad visual y funcional.</li>
                         </ul>
                     </article>
 
                     <article class="service-card">
-                        <h3>4. Optimización y Estrategia de Datos</h3>
-                        <p>
-                            Lo que no se mide, no se puede mejorar. Integramos herramientas que permiten trazar el camino del usuario.
-                        </p>
+                        <h3>Datos y automatizacion</h3>
+                        <p>Integramos herramientas para medir, aprender y reducir tareas repetitivas.</p>
                         <ul>
-                            <li>Integración de Analytics y Tracking: Configuración de eventos para medir conversiones reales.</li>
-                            <li>SEO Técnico: Estructura optimizada para que los buscadores encuentren tu negocio fácilmente.</li>
-                            <li>Automatización de Flujos: Conectamos tu web con tu CRM o herramientas de gestión (como Notion o Salesforce) para centralizar la información.</li>
+                            <li>Analytics y eventos de conversion.</li>
+                            <li>SEO tecnico.</li>
+                            <li>Integracion con CRM y WhatsApp.</li>
                         </ul>
                     </article>
                 </div>
@@ -91,10 +91,9 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-            <div class="footer-bottom">
-                <a href="index.html">Inicio</a> |
-            </div>
+            <div class="footer-bottom"><a href="index.html">Inicio</a></div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de Exito | Trackline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <title>Casos de Éxito</title>
 </head>
 <body>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
-            <nav class="site-nav" aria-label="Principal">
-                <a href="index.html">INICIO</a>
-                <a href="servicios.html">SERVICIOS</a>
-                <a href="alianzas.html">ALIANZAS</a>
-                <a href="casos_de_exito.html" class="active" aria-current="page">CASOS DE EXITO</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+            <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="alianzas.html">Alianzas</a>
+                <a href="casos_de_exito.html" class="active" aria-current="page">Casos de exito</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="sobre_nosotros.html">Sobre nosotros</a>
             </nav>
         </div>
     </header>
@@ -24,62 +34,56 @@
     <main class="page-shell">
         <div class="container">
             <section class="page-hero">
-                <div>
-                    <h1>Casos de Éxito</h1>
-                    <p>
-                        La teoría nos apasiona, pero los resultados nos definen. En esta sección compartimos cómo ayudamos a nuestros clientes a superar desafíos reales, desde la reestructuración de flujos de navegación hasta el aumento métrico de la retención de usuarios.
-                    </p>
-                    <p>
-                        Cada proyecto es una evidencia de nuestra metodología: analizar, trazar y ejecutar.
-                    </p>
-                </div>
+                <span class="eyebrow">Casos de exito</span>
+                <h1>Resultados reales con experiencias digitales medibles.</h1>
+                <p>
+                    Cada proyecto combina analisis, diseno y ejecucion. Estas historias muestran como
+                    mejoramos conversion, eficiencia y escalabilidad en distintos escenarios.
+                </p>
             </section>
 
-            <section class="section-block">
+            <section class="section-block reveal-on-scroll">
                 <div class="case-grid">
                     <article class="case-card">
-                        <div class="case-media">
-                            <img src="img/caso1.jpg" alt="Caso E-commerce">
+                        <div class="case-media case-visual visual-commerce" aria-hidden="true"></div>
+                        <div class="case-card-body">
+                            <span class="case-kpi">+35% conversiones</span>
+                            <h3>Tienda digital</h3>
+                            <p>Redisenamos la experiencia de compra, simplificando el checkout y mejorando la navegacion.</p>
+                            <ul>
+                                <li>Menos abandono de carrito.</li>
+                                <li>Mejores tiempos de carga.</li>
+                                <li>Flujo mobile mas claro.</li>
+                            </ul>
                         </div>
-                        <h3>Cliente A - E-commerce</h3>
-                        <p>
-                            Rediseñamos la experiencia de usuario de una tienda online, simplificando el proceso de compra y mejorando la navegación.
-                        </p>
-                        <ul>
-                            <li>Aumento del 35% en conversiones</li>
-                            <li>Reducción del abandono de carrito</li>
-                            <li>Mejora en tiempos de carga</li>
-                        </ul>
                     </article>
 
                     <article class="case-card">
-                        <div class="case-media">
-                            <img src="img/caso2.jpg" alt="Caso Startup">
+                        <div class="case-media case-visual visual-platform" aria-hidden="true"></div>
+                        <div class="case-card-body">
+                            <span class="case-kpi">Lanzamiento rapido</span>
+                            <h3>Emprendimiento tecnologico</h3>
+                            <p>Desarrollamos una plataforma desde cero priorizando escalabilidad, validacion y usabilidad.</p>
+                            <ul>
+                                <li>Producto minimo viable funcional.</li>
+                                <li>Arquitectura preparada para crecer.</li>
+                                <li>Mayor retencion inicial.</li>
+                            </ul>
                         </div>
-                        <h3>Cliente B - Startup</h3>
-                        <p>
-                            Desarrollamos una plataforma desde cero para una startup tecnológica, priorizando escalabilidad y usabilidad.
-                        </p>
-                        <ul>
-                            <li>Lanzamiento en tiempo récord</li>
-                            <li>Alta retención de usuarios</li>
-                            <li>Arquitectura preparada para crecimiento</li>
-                        </ul>
                     </article>
 
                     <article class="case-card">
-                        <div class="case-media">
-                            <img src="img/caso3.jpg" alt="Caso Empresa">
+                        <div class="case-media case-visual visual-automation" aria-hidden="true"></div>
+                        <div class="case-card-body">
+                            <span class="case-kpi">Procesos optimizados</span>
+                            <h3>Empresa corporativa</h3>
+                            <p>Automatizamos tareas internas y conectamos sistemas para mejorar la toma de decisiones.</p>
+                            <ul>
+                                <li>Menos carga operativa manual.</li>
+                                <li>Integracion con sistemas existentes.</li>
+                                <li>Datos disponibles para gestion.</li>
+                            </ul>
                         </div>
-                        <h3>Cliente C - Empresa Corporativa</h3>
-                        <p>
-                            Optimizamos procesos internos mediante automatización y análisis de datos, mejorando la eficiencia operativa.
-                        </p>
-                        <ul>
-                            <li>Automatización de tareas repetitivas</li>
-                            <li>Integración con sistemas existentes</li>
-                            <li>Mejor toma de decisiones basada en datos</li>
-                        </ul>
                     </article>
                 </div>
             </section>
@@ -89,10 +93,9 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-            <div class="footer-bottom">
-                <a href="index.html">Inicio</a> |
-            </div>
+            <div class="footer-bottom"><a href="index.html">Inicio</a></div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

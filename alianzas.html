@@ -3,53 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alianzas</title>
+    <title>Alianzas | Trackline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
-<body class="legacy-page">
+<body>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
-            <nav class="site-nav" aria-label="Principal">
-                <a href="index.html">INICIO</a>
-                <a href="servicios.html">SERVICIOS</a>
-                <a href="alianzas.html" class="active" aria-current="page">ALIANZAS</a>
-                <a href="casos_de_exito.html">CASOS DE EXITO</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+            <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="alianzas.html" class="active" aria-current="page">Alianzas</a>
+                <a href="casos_de_exito.html">Casos de exito</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="sobre_nosotros.html">Sobre nosotros</a>
             </nav>
         </div>
     </header>
-    <main>
-        <h2>Nuestras Alianzas</h2>
-        <p>
-            En Trackline Studio creemos en el poder de la colaboración.
-            Por eso destacamos a los grandes desarrolladores de software
-            con los que compartimos visión y compromiso con la innovación.
-        </p>
 
-        <h2>Principales Referentes Globales</h2>
-        <ul>
-            <li><strong>Microsoft</strong> - Líder en soluciones empresariales, nube (Azure) y productividad.</li>
-            <li><strong>Google</strong> - Innovación en inteligencia artificial, servicios en la nube y desarrollo web.</li>
-            <li><strong>Amazon Web Services (AWS)</strong> - Plataforma líder de infraestructura en la nube.</li>
-            <li><strong>IBM</strong> - Referente en inteligencia artificial (Watson) y soluciones corporativas.</li>
-            <li><strong>Oracle</strong> - Especialista en bases de datos y aplicaciones empresariales.</li>
-            <li><strong>SAP</strong> - Líder mundial en software de gestión empresarial (ERP).</li>
-        </ul>
+    <main class="page-shell">
+        <div class="container">
+            <section class="page-hero">
+                <span class="eyebrow">Alianzas</span>
+                <h1>Tecnologias y referentes que potencian nuestras soluciones.</h1>
+                <p>
+                    Creemos en el poder de la colaboracion. Trabajamos inspirados por plataformas
+                    lideres y por el talento local que impulsa la industria digital argentina.
+                </p>
+            </section>
 
-        <h2>Alianzas Locales</h2>
-        <p>
-            Además, reconocemos el talento de la industria argentina del software,
-            que se ha consolidado como uno de los polos tecnológicos más importantes
-            de América Latina, exportando servicios y soluciones innovadoras.
-        </p>
+            <section class="section-block">
+                <div class="alliance-grid">
+                    <article class="content-card">
+                        <h3>Microsoft</h3>
+                        <p>Lider en soluciones empresariales, nube, productividad e inteligencia aplicada.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Google</h3>
+                        <p>Innovacion en IA, servicios cloud, analitica y herramientas para equipos digitales.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>AWS</h3>
+                        <p>Infraestructura robusta para productos escalables, seguros y de alto rendimiento.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>IBM</h3>
+                        <p>Referente en soluciones corporativas, datos, automatizacion e inteligencia artificial.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Oracle</h3>
+                        <p>Especialista en bases de datos, aplicaciones empresariales y gestion de informacion.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>SAP</h3>
+                        <p>Plataforma global para gestion empresarial, procesos y operaciones integradas.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <article class="highlight-box">
+                    <h3>Industria argentina</h3>
+                    <p>
+                        Tambien valoramos el talento local: Argentina se consolida como un polo tecnologico
+                        regional con equipos capaces de exportar software, creatividad e innovacion.
+                    </p>
+                </article>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-        <div class="footer-bottom">
-            <a href="index.html">Inicio</a> |
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
+            <div class="footer-bottom"><a href="index.html">Inicio</a></div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

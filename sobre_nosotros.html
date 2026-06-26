@@ -3,67 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Trackline Studio</title>
+    <title>Sobre Nosotros | Trackline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
-<body class="legacy-page">
+<body>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
-            <nav class="site-nav" aria-label="Principal">
-                <a href="index.html">INICIO</a>
-                <a href="servicios.html">SERVICIOS</a>
-                <a href="alianzas.html">ALIANZAS</a>
-                <a href="casos_de_exito.html">CASOS DE EXITO</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="sobre_nosotros.html" class="active" aria-current="page">SOBRE NOSOTROS</a>
+            <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="alianzas.html">Alianzas</a>
+                <a href="casos_de_exito.html">Casos de exito</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="sobre_nosotros.html" class="active" aria-current="page">Sobre nosotros</a>
             </nav>
         </div>
     </header>
 
-    <section class="legacy-intro">
-        <h1>Trackline Studio</h1>
-        <p>Innovación y soluciones digitales</p>
-    </section>
+    <main class="page-shell">
+        <div class="container">
+            <section class="page-hero">
+                <span class="eyebrow">Sobre nosotros</span>
+                <h1>Un equipo que cruza estrategia, diseno y tecnologia.</h1>
+                <p>
+                    Acompanamos a empresas y organizaciones en su transformacion digital con soluciones
+                    pensadas para ser claras, medibles y sostenibles.
+                </p>
+            </section>
 
-    <main>
-        <h2>Sobre Nosotros</h2>
-        <p>
-            En Trackline Studio nos especializamos en acompañar a empresas y organizaciones
-            en su camino hacia la transformación digital. Nuestro equipo combina experiencia
-            técnica con visión estratégica para ofrecer soluciones tecnológicas adaptadas
-            a las necesidades de cada cliente.
-        </p>
+            <section class="section-block">
+                <div class="two-column">
+                    <article class="content-card">
+                        <h3>Nuestra mision</h3>
+                        <p>
+                            Impulsar la competitividad de nuestros clientes mediante herramientas digitales
+                            que optimicen procesos, mejoren la eficiencia y generen nuevas oportunidades.
+                        </p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Como trabajamos</h3>
+                        <p>
+                            Analizamos el contexto, definimos prioridades y ejecutamos soluciones con foco
+                            en experiencia de usuario, rendimiento y resultados concretos.
+                        </p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Valores</h3>
+                        <ul class="list-clean">
+                            <li>Compromiso con la excelencia.</li>
+                            <li>Innovacion constante.</li>
+                            <li>Transparencia y confianza.</li>
+                            <li>Orientacion al cliente.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
 
-        <h2>Nuestra Misión</h2>
-        <p>
-            Impulsar la competitividad de nuestros clientes mediante herramientas digitales
-            que optimicen procesos, mejoren la eficiencia y generen nuevas oportunidades
-            en un mundo cada vez más conectado.
-        </p>
-
-        <h2>Valores</h2>
-        <ul>
-            <li>Compromiso con la excelencia</li>
-            <li>Innovación constante</li>
-            <li>Transparencia y confianza</li>
-            <li>Orientación al cliente</li>
-        </ul>
-
-        <h2>Proyectos de nuestros integrantes</h2>
-        <ul>
-            <li><a href="https://camisahores.github.io/MisitiopersonalDisWebP1/" target="_blank" rel="noopener noreferrer">Camila Sahores Maxwell</a></li>
-            <li><a href="https://tdejesus01.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Thiago De Jesus</a></li>
-            <li><a href="https://manila03.github.io/proyect1-ux-uy/" target="_blank" rel="noopener noreferrer">Juan Francisco Zapata</a></li>
-            <li><a href="https://gianluca-uade.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Gianluca Terzoni</a></li>
-            <li><a href="https://omarcabezasuade.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Omar Gastón Cabezas</a></li>
-        </ul>
+            <section class="section-block">
+                <article class="highlight-box">
+                    <h3>Proyectos de nuestros integrantes</h3>
+                    <ul class="link-list">
+                        <li><a href="https://camisahores.github.io/MisitiopersonalDisWebP1/" target="_blank" rel="noopener noreferrer">Camila Sahores Maxwell</a></li>
+                        <li><a href="https://tdejesus01.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Thiago De Jesus</a></li>
+                        <li><a href="https://manila03.github.io/proyect1-ux-uy/" target="_blank" rel="noopener noreferrer">Juan Francisco Zapata</a></li>
+                        <li><a href="https://gianluca-uade.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Gianluca Terzoni</a></li>
+                        <li><a href="https://omarcabezasuade.github.io/Proyecto1/" target="_blank" rel="noopener noreferrer">Omar Gaston Cabezas</a></li>
+                    </ul>
+                </article>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-        <div class="footer-bottom">
-            <a href="index.html">Inicio</a> |
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
+            <div class="footer-bottom"><a href="index.html">Inicio</a></div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,68 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Trackline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <title>Document</title>
 </head>
 <body>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
-            <nav class="site-nav" aria-label="Principal">
-                <a href="index.html">INICIO</a>
-                <a href="servicios.html">SERVICIOS</a>
-                <a href="alianzas.html">ALIANZAS</a>
-                <a href="casos_de_exito.html">CASOS DE EXITO</a>
-                <a href="contacto.html" class="active" aria-current="page">CONTACTO</a>
-                <a href="sobre_nosotros.html">SOBRE NOSOTROS</a>
+            <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="6" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="12" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="alianzas.html">Alianzas</a>
+                <a href="casos_de_exito.html">Casos de exito</a>
+                <a href="contacto.html" class="active" aria-current="page">Contacto</a>
+                <a href="sobre_nosotros.html">Sobre nosotros</a>
             </nav>
         </div>
     </header>
 
     <main class="page-shell">
         <div class="container">
+            <section class="page-hero">
+                <span class="eyebrow">Contacto</span>
+                <h1>Contanos que queres mejorar y armamos el siguiente paso.</h1>
+                <p>
+                    Podemos ayudarte a definir alcance, priorizar funcionalidades y transformar una idea
+                    en una experiencia digital lista para salir al mercado.
+                </p>
+            </section>
+
             <section class="contact-layout">
                 <article class="contact-card">
-                    <h2>Formulario de Contacto</h2>
+                    <h2>Formulario de contacto</h2>
                     <form action="#" method="post" class="contact-form">
                         <div>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
                         </div>
 
                         <div>
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Correo electronico</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
                         </div>
 
                         <div>
-                            <label for="mensaje">Mensaje:</label>
+                            <label for="mensaje">Mensaje</label>
                             <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar consulta</button>
                     </form>
                 </article>
 
                 <aside class="contact-card">
-                    <h2>Datos de Contacto</h2>
+                    <h2>Datos de contacto</h2>
                     <dl class="contact-meta">
                         <dt>Correo</dt>
                         <dd>contacto@tracklinestudio.com</dd>
 
-                        <dt>Teléfono</dt>
+                        <dt>Telefono</dt>
                         <dd>+54 11 1234-5678</dd>
-                    </dl>
-                </aside>
-            </section>
 
-            <section class="section-block">
-                <article class="panel">
-                    <h2>Ubicación</h2>
-                    <p>CABA, Buenos Aires, Argentina</p>
-                </article>
+                        <dt>Ubicacion</dt>
+                        <dd>CABA, Buenos Aires, Argentina</dd>
+                    </dl>
+                    <div class="hero-actions">
+                        <a class="btn btn-secondary" href="https://wa.me/5491124576849?text=Hola%20Trackline%20Studio,%20quiero%20consultar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </div>
+                </aside>
             </section>
         </div>
     </main>
@@ -70,10 +88,9 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-            <div class="footer-bottom">
-                <a href="index.html">Inicio</a> |
-            </div>
+            <div class="footer-bottom"><a href="index.html">Inicio</a></div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
