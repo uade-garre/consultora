@@ -678,7 +678,8 @@ h3 {
 .content-card a,
 .panel a,
 .footer-bottom a,
-.link-list a {
+.link-list a,
+.text-link {
   color: var(--brand-dark);
   font-weight: 850;
   text-decoration: none;
@@ -687,8 +688,14 @@ h3 {
 .content-card a:hover,
 .panel a:hover,
 .footer-bottom a:hover,
-.link-list a:hover {
+.link-list a:hover,
+.text-link:hover {
   text-decoration: underline;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 16px;
 }
 
 .site-footer {
