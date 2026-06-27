@@ -1523,9 +1523,6 @@ body::after {
   left: 0;
   right: 0;
   top: calc(100% + 14px);
-  display: grid;
-  grid-template-columns: minmax(240px, 0.4fr) minmax(0, 1fr);
-  gap: 24px;
   min-height: 230px;
   padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1540,16 +1537,6 @@ body::after {
   transition: opacity 180ms ease, transform 220ms ease;
 }
 
-.mega-menu::before {
-  content: "Explorar";
-  align-self: start;
-  color: rgba(255, 255, 255, 0.38);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 .mega-menu.open {
   opacity: 1;
   pointer-events: auto;
@@ -1558,8 +1545,10 @@ body::after {
 
 .mega-panel {
   display: none;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
   gap: 12px 18px;
+  max-width: 760px;
+  margin-left: 30%;
 }
 
 .mega-panel.active {
@@ -1756,16 +1745,13 @@ body::after {
     top: calc(100% + 310px);
     width: min(280px, calc(100vw - 40px));
     min-height: 0;
-    grid-template-columns: 1fr;
     padding: 14px;
-  }
-
-  .mega-menu::before {
-    display: none;
   }
 
   .mega-panel {
     grid-template-columns: 1fr;
+    max-width: none;
+    margin-left: 0;
   }
 
   .mega-panel a {
