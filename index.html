@@ -23,12 +23,34 @@
             </button>
             <nav class="site-nav" id="site-nav" aria-label="Principal">
                 <a href="index.html" class="active" aria-current="page">Inicio</a>
-                <a href="servicios.html">Servicios</a>
+                <button class="menu-link menu-trigger" type="button" data-menu="servicios" aria-expanded="false">Servicios</button>
                 <a href="alianzas.html">Alianzas</a>
-                <a href="casos_de_exito.html">Casos de exito</a>
+                <button class="menu-link menu-trigger" type="button" data-menu="casos" aria-expanded="false">Casos</button>
                 <a href="contacto.html">Contacto</a>
-                <a href="sobre_nosotros.html">Sobre nosotros</a>
+                <button class="menu-link menu-trigger" type="button" data-menu="nosotros" aria-expanded="false">Nosotros</button>
             </nav>
+            <div class="mega-menu" aria-hidden="true">
+                <div class="mega-panel" data-panel="servicios">
+                    <span class="mega-kicker">Servicios</span>
+                    <a href="servicios.html">Consultoria UX/UI</a>
+                    <a href="servicios.html">Desarrollo web</a>
+                    <a href="servicios.html">Automatizacion</a>
+                    <a href="servicios.html">Datos y rendimiento</a>
+                </div>
+                <div class="mega-panel" data-panel="casos">
+                    <span class="mega-kicker">Resultados</span>
+                    <a href="casos_de_exito.html">Tienda digital</a>
+                    <a href="casos_de_exito.html">Emprendimiento tecnologico</a>
+                    <a href="casos_de_exito.html">Empresa corporativa</a>
+                </div>
+                <div class="mega-panel" data-panel="nosotros">
+                    <span class="mega-kicker">Trackline</span>
+                    <a href="sobre_nosotros.html">Equipo y enfoque</a>
+                    <a href="sobre_nosotros.html">Valores</a>
+                    <a href="alianzas.html">Alianzas</a>
+                    <a href="contacto.html">Hablemos</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -47,14 +69,18 @@
                 </div>
             </div>
             <div class="hero-media kinetic-hero" aria-label="Visualizacion digital animada">
-                <div class="kinetic-screen">
-                    <span class="orbit orbit-one"></span>
-                    <span class="orbit orbit-two"></span>
-                    <span class="signal signal-one"></span>
-                    <span class="signal signal-two"></span>
-                    <div class="data-panel panel-one"></div>
-                    <div class="data-panel panel-two"></div>
-                    <div class="data-panel panel-three"></div>
+                <div class="point-cloud">
+                    <span class="point point-a"></span>
+                    <span class="point point-b"></span>
+                    <span class="point point-c"></span>
+                    <span class="point point-d"></span>
+                    <span class="point point-e"></span>
+                    <span class="point point-f"></span>
+                    <span class="connection connection-one"></span>
+                    <span class="connection connection-two"></span>
+                    <span class="connection connection-three"></span>
+                    <span class="connection connection-four"></span>
+                    <span class="cloud-core"></span>
                 </div>
                 <div class="hero-metric">
                     <strong>35%</strong>
@@ -172,16 +198,64 @@
             const btn = document.querySelector('.nav-toggle');
             const nav = document.querySelector('.site-nav');
             const header = document.querySelector('.site-header');
+            const mega = document.querySelector('.mega-menu');
+            const triggers = document.querySelectorAll('.menu-trigger');
+            const panels = document.querySelectorAll('.mega-panel');
             let lastScroll = window.scrollY;
+
+            function closeMega() {
+                if (!mega) return;
+                mega.classList.remove('open');
+                mega.setAttribute('aria-hidden', 'true');
+                triggers.forEach(function(trigger){ trigger.setAttribute('aria-expanded', 'false'); });
+                panels.forEach(function(panel){ panel.classList.remove('active'); });
+            }
+
+            function openMega(name, trigger) {
+                if (!mega) return;
+                const panel = document.querySelector('.mega-panel[data-panel="' + name + '"]');
+                if (!panel) return;
+                panels.forEach(function(item){ item.classList.remove('active'); });
+                triggers.forEach(function(item){ item.setAttribute('aria-expanded', 'false'); });
+                panel.classList.add('active');
+                mega.classList.add('open');
+                mega.setAttribute('aria-hidden', 'false');
+                if (trigger) trigger.setAttribute('aria-expanded', 'true');
+            }
+
+            triggers.forEach(function(trigger){
+                trigger.addEventListener('click', function(event){
+                    event.stopPropagation();
+                    const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                    if (isOpen) {
+                        closeMega();
+                    } else {
+                        openMega(trigger.dataset.menu, trigger);
+                    }
+                });
+                trigger.addEventListener('mouseenter', function(){
+                    if (window.matchMedia('(min-width: 981px)').matches) {
+                        openMega(trigger.dataset.menu, trigger);
+                    }
+                });
+            });
+
+            if (mega) {
+                mega.addEventListener('mouseleave', closeMega);
+                mega.addEventListener('click', function(event){ event.stopPropagation(); });
+            }
+
             if (btn && nav) {
                 btn.addEventListener('click', function(){
                     const isOpen = nav.classList.toggle('open');
                     btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    closeMega();
                 });
                 document.addEventListener('click', function(e){
                     if (!e.target.closest('.site-header')) {
                         nav.classList.remove('open');
                         btn.setAttribute('aria-expanded', 'false');
+                        closeMega();
                     }
                 });
             }
@@ -191,6 +265,7 @@
                     const current = window.scrollY;
                     if (current > 120 && current > lastScroll) {
                         header.classList.add('header-hidden');
+                        closeMega();
                     } else {
                         header.classList.remove('header-hidden');
                     }
@@ -199,7 +274,16 @@
                 }, { passive: true });
             }
 
+            document.addEventListener('keydown', function(event){
+                if (event.key === 'Escape') closeMega();
+            });
+
             const revealItems = document.querySelectorAll('.reveal-on-scroll, .service-card, .stat-card, .cta-band');
+            revealItems.forEach(function(item, index){
+                if (!item.dataset.reveal) {
+                    item.dataset.reveal = ['up', 'left', 'right'][index % 3];
+                }
+            });
             if ('IntersectionObserver' in window) {
                 const observer = new IntersectionObserver(function(entries){
                     entries.forEach(function(entry){
