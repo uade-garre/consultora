@@ -1825,6 +1825,11 @@ body::after {
     width: min(286px, calc(100vw - 20px)) !important;
   }
 
+  .chat-input {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
   .whatsapp-float {
     width: 42px !important;
     height: 42px !important;
