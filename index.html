@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos, titulo y enlaces a hojas de estilo de la pagina. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trackline Studio | Consultora digital</title>
@@ -11,6 +12,7 @@
 </head>
 <body class="home-page">
     <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <!-- Encabezado con marca y navegacion principal. -->
     <header class="site-header">
         <div class="site-header-inner">
             <a href="index.html" class="logo">TRACKLINE STUDIO</a>
@@ -53,7 +55,7 @@
             </div>
         </div>
     </header>
-
+    <!-- Contenido principal de la pagina. -->
     <main id="main-content">
         <section class="container hero">
             <div class="hero-copy">
@@ -154,7 +156,7 @@
             </div>
         </section>
     </main>
-
+    <!-- Pie de pagina con creditos y enlaces secundarios. -->
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
@@ -175,7 +177,8 @@
         <img src="img/robot-assistant.svg" alt="">
     </button>
     <div class="chat-widget" aria-hidden="true">
-        <header class="chat-header">
+    <!-- Encabezado con marca y navegacion principal. -->
+    <header class="chat-header">
             <img src="img/robot-assistant.svg" alt="">
             <strong>Asistente Trackline</strong>
             <button class="chat-close" type="button" aria-label="Cerrar chat">x</button>
@@ -188,14 +191,17 @@
                 <button class="quick" type="button" data-msg="Contactarme por WhatsApp">WhatsApp</button>
             </div>
         </div>
-        <footer class="chat-footer">
+    <!-- Pie de pagina con creditos y enlaces secundarios. -->
+    <footer class="chat-footer">
             <input class="chat-input" placeholder="Escribi tu mensaje..." aria-label="Escribir mensaje">
             <button class="chat-send" type="button" aria-label="Enviar">Enviar</button>
         </footer>
     </div>
-
+    <!-- Scripts que activan la interaccion de la pagina. -->
     <script>
+        // Script inline de la home: replica la navegacion y suma el chat flotante.
         (function(){
+            // Elementos de navegacion, cabecera y mega menu.
             const btn = document.querySelector('.nav-toggle');
             const nav = document.querySelector('.site-nav');
             const header = document.querySelector('.site-header');
@@ -204,6 +210,7 @@
             const panels = document.querySelectorAll('.mega-panel');
             let lastScroll = window.scrollY;
 
+            // Funciones para abrir y cerrar el mega menu.
             function closeMega() {
                 if (!mega) return;
                 mega.classList.remove('open');
@@ -279,6 +286,7 @@
                 if (event.key === 'Escape') closeMega();
             });
 
+            // Configuracion de animaciones al aparecer en pantalla.
             const revealItems = document.querySelectorAll('.reveal-on-scroll, .service-card, .stat-card, .cta-band');
             revealItems.forEach(function(item, index){
                 if (!item.dataset.reveal) {
@@ -299,6 +307,7 @@
                 revealItems.forEach(function(item){ item.classList.add('is-visible'); });
             }
 
+            // Elementos del chat flotante y respuestas rapidas.
             const launch = document.querySelector('.chat-launch');
             const widget = document.querySelector('.chat-widget');
             const closeBtn = document.querySelector('.chat-close');
@@ -307,6 +316,7 @@
             const messages = document.querySelector('.messages');
             const quicks = document.querySelectorAll('.chat-quick .quick');
 
+            // Agrega un mensaje al historial visible del chat.
             function addMessage(text, who) {
                 const el = document.createElement('div');
                 el.className = 'msg ' + (who || 'bot');
@@ -315,6 +325,7 @@
                 messages.scrollTop = messages.scrollHeight;
             }
 
+            // Genera una respuesta automatica segun palabras clave del usuario.
             function botReply(userText) {
                 const text = userText.toLowerCase();
                 if (text.includes('whatsapp')) {

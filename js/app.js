@@ -1,4 +1,6 @@
+// Script general: controla menu responsive, mega menu, header al hacer scroll y animaciones de entrada.
 (function(){
+  // Referencias a elementos principales de navegacion y cabecera.
   const btn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.site-nav');
   const header = document.querySelector('.site-header');
@@ -7,6 +9,7 @@
   const panels = document.querySelectorAll('.mega-panel');
   let lastScroll = window.scrollY;
 
+  // Cierra el mega menu y resetea sus estados accesibles.
   function closeMega() {
     if (!mega) return;
     mega.classList.remove('open');
@@ -15,6 +18,7 @@
     panels.forEach(function(panel){ panel.classList.remove('active'); });
   }
 
+  // Abre el panel del mega menu que corresponde al boton seleccionado.
   function openMega(name, trigger) {
     if (!mega) return;
     const panel = document.querySelector('.mega-panel[data-panel="' + name + '"]');
@@ -27,6 +31,7 @@
     if (trigger) trigger.setAttribute('aria-expanded', 'true');
   }
 
+  // Eventos de botones del menu: click en mobile y hover en escritorio.
   triggers.forEach(function(trigger){
     trigger.addEventListener('click', function(event){
       event.stopPropagation();
@@ -64,6 +69,7 @@
     });
   }
 
+  // Oculta o compacta la cabecera segun el desplazamiento vertical.
   if (header) {
     window.addEventListener('scroll', function(){
       const current = window.scrollY;
@@ -82,6 +88,7 @@
     if (event.key === 'Escape') closeMega();
   });
 
+  // Animaciones de aparicion progresiva para tarjetas y secciones.
   const revealItems = document.querySelectorAll('.reveal-on-scroll, .service-card, .case-card, .content-card, .stat-card, .contact-card, .panel, .highlight-box');
   revealItems.forEach(function(item, index){
     if (!item.dataset.reveal) {
