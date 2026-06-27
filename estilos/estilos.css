@@ -1469,6 +1469,36 @@ body::after {
   .kinetic-hero {
     min-height: 280px;
   }
+
+  .chat-launch {
+    width: 48px;
+    height: 48px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chat-launch img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .chat-widget {
+    right: 12px;
+    bottom: 74px;
+    width: min(300px, calc(100vw - 24px));
+  }
+
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    right: 74px;
+    bottom: 16px;
+  }
+
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 /* Navegacion desplegable y nube de puntos */
