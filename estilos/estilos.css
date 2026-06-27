@@ -1523,8 +1523,8 @@ body::after {
   left: 0;
   right: 0;
   top: calc(100% + 14px);
-  min-height: 230px;
-  padding: 28px;
+  min-height: 0;
+  padding: 24px 28px 26px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 0 0 8px 8px;
   background:
@@ -1545,10 +1545,11 @@ body::after {
 
 .mega-panel {
   display: none;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px 18px;
-  max-width: 760px;
-  margin-left: 30%;
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
 }
 
 .mega-panel.active {
@@ -1558,7 +1559,7 @@ body::after {
 
 .mega-kicker {
   grid-column: 1 / -1;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: #69d9e0;
   font-size: 0.72rem;
   font-weight: 900;
@@ -1568,7 +1569,7 @@ body::after {
 
 .mega-panel a {
   display: flex;
-  min-height: 48px;
+  min-height: 54px;
   align-items: center;
   border-left: 2px solid rgba(101, 214, 223, 0.28);
   color: #d2e0ea;
