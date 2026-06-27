@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | Trackline Studio</title>
+    <title>Mapa del Sitio | Trackline Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
             </button>
             <nav class="site-nav" id="site-nav" aria-label="Principal">
                 <a href="index.html">Inicio</a>
-                <button class="menu-link menu-trigger active" type="button" data-menu="servicios" aria-expanded="false" aria-current="page">Servicios</button>
+                <button class="menu-link menu-trigger" type="button" data-menu="servicios" aria-expanded="false">Servicios</button>
                 <a href="alianzas.html">Alianzas</a>
                 <button class="menu-link menu-trigger" type="button" data-menu="casos" aria-expanded="false">Casos</button>
                 <a href="contacto.html">Contacto</a>
@@ -56,54 +56,59 @@
     <main class="page-shell">
         <div class="container">
             <section class="page-hero">
-                <span class="eyebrow">Servicios</span>
-                <h1>Soluciones digitales para mejorar ventas, operacion y experiencia.</h1>
+                <span class="eyebrow">Mapa del sitio</span>
+                <h1>Estructura general de Trackline Studio.</h1>
                 <p>
-                    Transformamos ideas complejas en interfaces intuitivas. Nos especializamos en crear
-                    ecosistemas donde el diseno, los datos y la tecnologia trabajan juntos.
+                    Esta pagina muestra las secciones principales del sitio y como se conectan entre si.
+                    Sirve como guia de navegacion y como resumen del contenido.
                 </p>
             </section>
 
-            <section class="section-block">
-                <div class="service-grid">
-                    <article class="service-card">
-                        <h3>Consultoria UX/UI</h3>
-                        <p>Antes de disenar, analizamos. Evaluamos fricciones, jerarquia visual y objetivos de negocio.</p>
-                        <ul>
-                            <li>Auditoria de UX y navegacion.</li>
-                            <li>Prototipado de alta fidelidad.</li>
-                            <li>Pruebas de usuario y mejoras iterativas.</li>
-                        </ul>
+            <section class="section-block reveal-on-scroll">
+                <div class="sitemap-grid">
+                    <article class="content-card">
+                        <h3>Inicio</h3>
+                        <p>Presenta la propuesta principal, servicios destacados, metricas y llamados a la accion.</p>
+                        <a href="index.html">Ir a Inicio</a>
                     </article>
 
-                    <article class="service-card">
-                        <h3>Desarrollo web</h3>
-                        <p>Construimos sitios rapidos, seguros y escalables con foco en conversion.</p>
-                        <ul>
-                            <li>Sitios corporativos y paginas de conversion.</li>
-                            <li>Experiencias adaptables a distintos dispositivos.</li>
-                            <li>Tiendas digitales y aplicaciones web.</li>
+                    <article class="content-card">
+                        <h3>Servicios</h3>
+                        <ul class="list-clean">
+                            <li>Consultoria UX/UI.</li>
+                            <li>Desarrollo web.</li>
+                            <li>Sistemas de diseno.</li>
+                            <li>Datos y automatizacion.</li>
                         </ul>
+                        <a href="servicios.html">Ir a Servicios</a>
                     </article>
 
-                    <article class="service-card">
-                        <h3>Sistemas de diseno</h3>
-                        <p>Creamos lenguajes visuales consistentes para que tu marca crezca sin desordenarse.</p>
-                        <ul>
-                            <li>Bibliotecas de componentes.</li>
-                            <li>Manual de estilo digital.</li>
-                            <li>Escalabilidad visual y funcional.</li>
+                    <article class="content-card">
+                        <h3>Casos de exito</h3>
+                        <ul class="list-clean">
+                            <li>Estaci&oacute;n Constituci&oacute;n.</li>
+                            <li>Emprendimiento tecnologico.</li>
+                            <li>Empresa corporativa.</li>
                         </ul>
+                        <a href="casos_de_exito.html">Ir a Casos</a>
                     </article>
 
-                    <article class="service-card">
-                        <h3>Datos y automatizacion</h3>
-                        <p>Integramos herramientas para medir, aprender y reducir tareas repetitivas.</p>
-                        <ul>
-                            <li>Analitica y eventos de conversion.</li>
-                            <li>SEO tecnico.</li>
-                            <li>Integracion con CRM y WhatsApp.</li>
-                        </ul>
+                    <article class="content-card">
+                        <h3>Alianzas</h3>
+                        <p>Muestra referentes tecnologicos globales y el valor de la industria argentina.</p>
+                        <a href="alianzas.html">Ir a Alianzas</a>
+                    </article>
+
+                    <article class="content-card">
+                        <h3>Contacto</h3>
+                        <p>Incluye formulario, datos de contacto y acceso directo a WhatsApp.</p>
+                        <a href="contacto.html">Ir a Contacto</a>
+                    </article>
+
+                    <article class="content-card">
+                        <h3>Sobre nosotros</h3>
+                        <p>Describe la mision, metodologia, valores y proyectos de integrantes.</p>
+                        <a href="sobre_nosotros.html">Ir a Sobre nosotros</a>
                     </article>
                 </div>
             </section>
@@ -113,7 +118,10 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <p>Copyright 2026 - Trackline Studio - Todos los derechos reservados</p>
-            <div class="footer-bottom"><a href="index.html">Inicio</a> | <a href="mapa_sitio.html">Mapa del sitio</a></div>
+            <div class="footer-bottom">
+                <a href="index.html">Inicio</a> |
+                <a href="mapa_sitio.html">Mapa del sitio</a>
+            </div>
         </div>
     </footer>
     <script src="js/app.js"></script>
