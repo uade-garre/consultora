@@ -1299,11 +1299,11 @@ body::after {
 
 /* Direccion visual inspirada en Accenture: menor escala, movimiento sobrio */
 .site-header {
-  transition: transform 260ms ease, background 220ms ease, border-color 220ms ease;
+  transition: background 220ms ease, border-color 220ms ease;
 }
 
 .site-header.header-hidden {
-  transform: translateY(-105%);
+  transform: none;
 }
 
 .site-header.header-compact {
@@ -1312,7 +1312,7 @@ body::after {
 }
 
 .site-header.header-compact .site-header-inner {
-  min-height: 62px;
+  min-height: 74px;
 }
 
 .home-page .hero {

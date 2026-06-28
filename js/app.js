@@ -69,16 +69,11 @@
     });
   }
 
-  // Oculta o compacta la cabecera segun el desplazamiento vertical.
+  // Ajusta el fondo de la cabecera segun el desplazamiento vertical.
   if (header) {
     window.addEventListener('scroll', function(){
       const current = window.scrollY;
-      if (current > 120 && current > lastScroll) {
-        header.classList.add('header-hidden');
-        closeMega();
-      } else {
-        header.classList.remove('header-hidden');
-      }
+      if (current < lastScroll) closeMega();
       header.classList.toggle('header-compact', current > 24);
       lastScroll = current;
     }, { passive: true });
